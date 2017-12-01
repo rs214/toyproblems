@@ -1,2 +1,2 @@
 # toyproblems
-collection of javascript toy problems
+collection of javascript toy problems from codewars
