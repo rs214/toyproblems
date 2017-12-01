@@ -5,8 +5,11 @@
 // Input will be an object where key:value-pairs will represent an animal and a binary number.
 // Output should be an integer that equals the sum of all the animals in the zoo.
 
-
+// example:
+// countTheAnimals({aardvark: '1101', tiger: '1100', donkey: '1100', emu: '1010'})
+// should equal 47
 
 function countTheAnimals(animals) {
 //happy coding!
+
 }
