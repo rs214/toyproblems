@@ -10,6 +10,12 @@
 // should equal 47
 
 function countTheAnimals(animals) {
-//happy coding!
-
+  var count = 0;
+    for (var key in animals) {
+      count += parseInt(animals[key], 2)
+      console.log(count)
+    }
+  return count;
 }
+
+countTheAnimals({aardvark: '1101', tiger: '1100', donkey: '1100', emu: '1010'}) //=> 47
