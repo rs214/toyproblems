@@ -11,7 +11,17 @@
 */
 
 var evenOccurrence = function(arr) {
-
+  var hash = {};
+  for (var i = 0; i < arr.length; i++) {
+    current = arr[i];
+    hash[current] = (hash[current] ? hash[current] : 0) + 1
+  }
+  for (var x = 0; x < arr.length; x++) {
+    if (hash[arr[x]] % 2 === 0) {
+      return arr[x];
+    }
+  }
+  return null;
 }
 
-//test
+evenOccurrence([1, 7, 12, 4, 5, 6, 8, 9, 6, 12, 4]); //=> 12
