@@ -39,6 +39,12 @@ var Tree = function(value) {
 
 Tree.prototype.countLeaves = function () {
   // TODO: implement me!
+  if (this.children.length === 0) {
+    return 1
+  }
+  return this.children.reduce((acc, curr) => {
+    return acc + curr.countLeaves();
+  }, 0)
 };
 
 /**
