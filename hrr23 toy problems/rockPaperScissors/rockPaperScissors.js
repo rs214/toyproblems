@@ -19,6 +19,26 @@
 
 
 var rockPaperScissors = function (rounds) {
+  var result = [];
+  var possibilities = ['rock', 'paper', 'scissors'];
+  rounds = rounds || 3;
 
+  function recurse (roundsLeft, currentRound) {
+    if (roundsLeft === 0) {
+      result.push(currentRound)
+      return;
+    }
+    //we want this function to loop and push into result array
+    for (var i = 0; i < possibilities.length; i++) {
+      console.log(currentRound, 'currentRound')
+      console.log(roundsLeft, 'roundsLeft')
+      console.log(currentRound.concat(possibilities[i]), 'currentRoundconcat')
+     recurse(roundsLeft - 1, currentRound.concat(possibilities[i]))
+    }
+  }
+  recurse(rounds, [])
+  return result
 }
+
+rockPaperScissors()
 
